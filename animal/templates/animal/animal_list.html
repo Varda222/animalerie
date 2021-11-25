@@ -1,0 +1,12 @@
+{% extends 'animal/base.html' %}
+{% block content %}
+
+
+        {% for animal in animals %}
+    <div class='row'>
+        <div class='col' style='background-color: cadetblue;'><a href="{% url 'animal_detail' id_animal=animal.id_animal %}">{{ animal.id_animal }}</a></div><!--此处超链接格式有问题-->
+        <div class='col'>état: {{ animal.etat }}</div>
+        <div class='col'>lieu: {{animal.lieu}}</div>
+    </div>
+{% endfor %}
+{% endblock %}
